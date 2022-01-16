@@ -58,12 +58,12 @@ class Navbar extends Component {
                         </div>
                     </div>
                 </nav >
-                <div className='d-flex'>
-                    <div className={this.props.match.params.activetab === 'posts' ? 'is-active' : ''} onClick={() => this.onChangeTab('posts')}>
+                <div className='d-flex tabs'>
+                    <div className={`tab ${this.props.match.params.activetab === 'posts' ? 'is-active' : ''}`} onClick={() => this.onChangeTab('posts')}>
                         Posts
 
                     </div>
-                    <div className={this.props.match.params.activetab === 'albums' ? 'is-active' : ''} onClick={() => this.onChangeTab('albums')}>
+                    <div className={`tab ${this.props.match.params.activetab === 'albums' ? 'is-active' : ''}`} onClick={() => this.onChangeTab('albums')}>
                         Albums
 
                     </div>

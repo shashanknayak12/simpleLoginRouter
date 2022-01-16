@@ -40,38 +40,97 @@ class Posts extends Component {
         this.setState({ isCommentOpenFor: -1, comments: [] })
     }
 
+
+    deleteComment = (commentId) => {
+        const newComments = [...this.state.comments]
+
+        const newCommentarr = newComments.filter(comment => {
+            return comment.id !== commentId
+        })
+
+        this.setState({ comments: newCommentarr })
+    }
+
+
+    deletePost = (postId) => {
+
+        const newposts = [...this.state.userIdPost]
+
+        const newPostarr = newposts.filter(post => {
+            return post.id !== postId
+        })
+        this.setState({ userIdPost: newPostarr })
+
+    }
+
     render() {
 
 
-        console.log(this.state.comments)
+
         return (
             <div>
 
                 {this.state.userIdPost.map(eachPost => {
                     return (
                         <div className='card-post'>
+                            <div className='post-title'>
+                                <h3>{eachPost.title}</h3>
+                            </div>
 
-                            <h3>{eachPost.title}</h3>
                             <p>{eachPost.body}</p>
 
+
                             {this.state.isCommentOpenFor === eachPost.id ?
-                                <div><h1>comments section</h1>
+                                <div className='comments-card'>
+                                    <h1>comments section</h1>
                                     {this.state.comments.map(eachComment => {
                                         return (
-                                            <div>
-                                                <h3>{eachComment.name}</h3>
-                                                <p>{eachComment.body}</p>
-                                            </div>)
+                                            <div className='each-comments'>
+                                                <div  >
+                                                    <h3>{eachComment.name}</h3>
+                                                </div>
+                                                <div>
+                                                    <p>{eachComment.body}</p>
+                                                </div>
+
+                                                <button
+                                                    onClick={() => this.deleteComment(eachComment.id)}
+                                                    className='btn btn-outline-danger'
+                                                >
+                                                    Delete Comment
+                                                </button>
+
+                                            </div>
+                                        )
                                     })}
-                                    <button onClick={this.hideComments}>Hide</button>
+                                    <button
+                                        className=' btn btn-outline-secondary'
+                                        onClick={this.hideComments}
+                                    >
+                                        Hide
+                                    </button>
                                 </div>
                                 :
-                                <button
-                                    onClick={() => this.openComment(eachPost.id)}
-                                    className='btn btn-outline-primary'
-                                >Open Comment</button>
+                                <div>
+                                    <button
+                                        onClick={() => this.openComment(eachPost.id)}
+                                        className='btn btn-outline-primary'
+                                    >
+                                        Open Comment
+                                    </button>
+
+
+                                    <button
+                                        onClick={() => this.deletePost(eachPost.id)}
+                                        className='btn btn-outline-danger ms-2 ps-4 pe-4'
+                                    >
+                                        Delete Post
+                                    </button>
+                                </div>
+
 
                             }
+
 
 
                         </div>

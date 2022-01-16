@@ -38,10 +38,40 @@ body {
 	background-color: rgb(199, 29, 23);
 }
 
+/*post section*/
 .card-post {
 	width: 50rem;
 	padding: 2rem;
 	margin: 10px auto;
 	border: 1px solid #ddd;
 	box-shadow: 1px 1px 10px 1px #ddd;
+}
+
+.tabs {
+	margin: auto;
+	width: fit-content;
+}
+.tab {
+	padding: 5px 20px;
+	font-size: 24px;
+}
+
+.post-title {
+	background-color: #e6e6e6;
+	padding: 1rem;
+}
+
+.comments-card {
+	border: 1px solid #ddd;
+	padding: 1.5rem;
+}
+
+.comments-card h1 {
+	color: rgb(15, 15, 153);
+}
+
+.each-comments {
+	border: 1px solid #eaeaea;
+	padding: 1rem;
+	margin: 10px;
 }
