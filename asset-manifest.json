@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/simpleLoginRouter/static/css/main.5c282f92.css",
-    "main.js": "/simpleLoginRouter/static/js/main.dce99fed.js",
+    "main.css": "/simpleLoginRouter/static/css/main.9239a348.css",
+    "main.js": "/simpleLoginRouter/static/js/main.7b78dd19.js",
     "index.html": "/simpleLoginRouter/index.html",
-    "main.5c282f92.css.map": "/simpleLoginRouter/static/css/main.5c282f92.css.map",
-    "main.dce99fed.js.map": "/simpleLoginRouter/static/js/main.dce99fed.js.map"
+    "main.9239a348.css.map": "/simpleLoginRouter/static/css/main.9239a348.css.map",
+    "main.7b78dd19.js.map": "/simpleLoginRouter/static/js/main.7b78dd19.js.map"
   },
   "entrypoints": [
-    "static/css/main.5c282f92.css",
-    "static/js/main.dce99fed.js"
+    "static/css/main.9239a348.css",
+    "static/js/main.7b78dd19.js"
   ]
 }
