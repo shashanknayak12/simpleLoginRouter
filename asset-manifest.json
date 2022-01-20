@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/simpleLoginRouter/static/css/main.5c282f92.css",
+    "main.js": "/simpleLoginRouter/static/js/main.dce99fed.js",
+    "index.html": "/simpleLoginRouter/index.html",
+    "main.5c282f92.css.map": "/simpleLoginRouter/static/css/main.5c282f92.css.map",
+    "main.dce99fed.js.map": "/simpleLoginRouter/static/js/main.dce99fed.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5c282f92.css",
+    "static/js/main.dce99fed.js"
+  ]
+}
