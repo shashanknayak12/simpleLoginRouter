@@ -39,6 +39,7 @@ class Login extends Component {
                 type: 'error'
             })
         }
+        this.setState({ userId: '' })
 
     }
 
@@ -46,15 +47,15 @@ class Login extends Component {
         return (
             <div className='card' >
 
-                <div className="mb-3">
-                    <h1>Login Page</h1>
+                <div className="mb-3 text-center">
+                    <h1 className=''>Login</h1>
 
                     <input
                         onChange={this.onChange}
                         value={this.state.userId}
                         type="text"
                         className="form-control"
-                        placeholder='User Id'
+                        placeholder='1-10'
                     />
 
                 </div >
@@ -63,6 +64,7 @@ class Login extends Component {
                     onClick={this.onClick}
                     type="submit"
                     className="btn btn-primary"
+
                 >
                     Submit
                 </button>

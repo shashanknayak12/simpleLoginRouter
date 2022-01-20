@@ -2,6 +2,7 @@ import React from 'react';
 import { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { Route, Switch } from 'react-router-dom';
+
 import Posts from './Posts';
 
 
@@ -63,16 +64,12 @@ class Navbar extends Component {
                         Posts
 
                     </div>
-                    <div className={`tab ${this.props.match.params.activetab === 'albums' ? 'is-active' : ''}`} onClick={() => this.onChangeTab('albums')}>
-                        Albums
 
-                    </div>
                 </div>
 
                 <Switch>
                     <Route path='/posts' component={() => <Posts />} />
 
-                    <Route path='/albums' component={() => <div>albums</div>} />
 
                 </Switch>
 
